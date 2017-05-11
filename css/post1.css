@@ -1,0 +1,11 @@
+p{
+    text-align: left;
+    font-weight: normal;
+    margin-top: 1em;
+}
+blockquote{
+    margin: 2em;
+    padding: 2em;
+    border: 0.3em solid #e0dfcc;
+    text-shadow: 0 1 white;
+}
