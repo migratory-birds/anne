@@ -1,0 +1,110 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/*操作条*/
+.operateBtn{
+  margin-top: 5px;
+  padding-top: 15px;
+  padding-left: 9px;
+  text-align: left;
+}
+/**筛选条*/
+.filterbar{
+  text-align: left;
+  background-color: #fff;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  padding-left: 21px;
+  .el-form-item--mini.el-form-item{
+    margin-bottom: 0;
+  }
+  .el-form-item{
+    margin-bottom: 0;
+  }
+}
+/*分页条*/
+.pagination{
+  // position: relative;
+  display: inline-block;
+  width: auto;
+  height: 32px;
+  background-color: #fff;
+  .el-pagination{
+    white-space: nowrap;
+    position: absolute;
+    color: #303133;
+    font-weight: 700;
+    right: 50px;
+  }
+}
+/*删除按钮*/
+@mixin delbtn{
+  background-color: #ed4014;
+  color: #fff;
+}
+
+/*多个过滤条*/
+$totalHeight:32px;
+$borderWidth:1px;
+.multiFilter{
+  .el-form--inline .el-form-item {
+    margin-right: 5px;
+  }
+  .el-form-item__label{
+    min-width: 76px;
+    line-height:$totalHeight - $borderWidth * 2;
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    border: $borderWidth solid #ddd;
+    border-right: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .el-form-item__content{
+      line-height: 32px;
+      position: relative;
+      color: #999;
+      .el-input,.el-select{
+      width: 170px;
+      }
+      .el-input__inner{
+        height: 32px;
+        line-height: 32px;
+        border-radius: 0;
+      } 
+      .el-select + .el-input > input{
+        margin-left: -1px;
+      }
+      .el-select + .el-input > input,div:only-child > div > input,div:only-child > input,div:only-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+  }
+}

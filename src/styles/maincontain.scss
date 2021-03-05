@@ -1,0 +1,14 @@
+.maincontain{
+    // width: calc(100vw - 184px);
+    // width: calc(100vw - 185px);
+    // width: calc(100vw - 205px);
+    // margin-left: 190px;
+    // height: calc(100vh - 140px);
+    // padding: 5px;
+
+    // width: calc(100vw - 205px);
+    margin-left: $sideBarWidth;
+    height: calc(100vh - #{$barHeight});
+    // padding: 5px;
+    overflow: scroll;
+  }
